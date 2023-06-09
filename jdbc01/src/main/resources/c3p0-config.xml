@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+  <default-config>
+      <!-- 提供获取连接的4个基本信息 -->
+    <property name="driverClass">com.mysql.jdbc.Driver</property>
+    <property name="jdbcUrl">jdbc:mysql://localhost:3306/atguigudb?rewriteBatchedStatements=true&amp;useUnicode=true&amp;characterEncoding=utf8</property>
+    <property name="user">root</property>
+    <property name="password">root</property>
+	
+	<!-- 连接池参数 -->
+      <!-- 当数据库连接池中的连接数不够时,c3p0一次性向数据库服务器申请的连接数 -->
+     <property name="acquireIncrement">10</property>
+      <!-- c3p0数据库连接池中初始化时的连接数 -->
+     <property name="initialPoolSize">10</property>
+      <!-- c3p0数据库连接池中维护的最少连接数 -->
+     <property name="minPoolSize">10</property>
+      <!-- c3p0数据库连接池中维护的最多连接数 -->
+     <property name="maxPoolSize">100</property>
+      <!-- c3p0数据库连接池中最多维护的Statement的个数 -->
+     <property name="maxStatements">5000</property>
+      <!-- 每个连接中可以最多使用的Statement的个数 -->
+     <property name="maxStatementsPerConnection">5</property>
+     <property name="checkoutTimeout">10000</property>
+     <property name="maxIdleTime">1000</property>
+  </default-config>
+
+ 
+</c3p0-config>
+
+
